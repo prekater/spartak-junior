@@ -4,10 +4,8 @@ workflow:
       when: never
     - when: always
 variables:
-  # IPv4 Public IP
-  DEPLOYMENT_SERVER_HOST: $DEPLOYMENT_SERVER_HOST
   # Public DNS
-  APP_ENDPOINT: "ec2-3-94-232-213.compute-1.amazonaws.com"
+  APP_ENDPOINT: $DEPLOYMENT_SERVER_HOST
 
 image: alpine:3.15.1
 stages:
@@ -25,6 +23,7 @@ stages:
     - export IMAGE_NAME=$CI_REGISTRY_IMAGE/frontend
     - export IMAGE_TAG=$SERVICE_VERSION
   script:
+    - groups ec2-user
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
     - docker push $IMAGE_NAME:$IMAGE_TAG
