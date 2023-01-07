@@ -16,7 +16,7 @@ stages:
 .build:
   stage: build
   tags:
-    - "docker"
+    - "shell"
     - "aws"
   variables:
     MICRO_SERVICE: ""
@@ -25,7 +25,6 @@ stages:
     - export IMAGE_NAME=$CI_REGISTRY_IMAGE/frontend
     - export IMAGE_TAG=$SERVICE_VERSION
   script:
-    - docker
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
     - docker push $IMAGE_NAME:$IMAGE_TAG
