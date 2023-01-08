@@ -36,9 +36,6 @@ stages:
 
   before_script:
     - chmod 400 $SSH_PRIVATE_KEY
-    - echo ec2-user@$APP_ENDPOINT
-    - echo $SSH_PRIVATE_KEY
-    - cat $SSH_PRIVATE_KEY
     - export IMAGE_NAME=$CI_REGISTRY_IMAGE/frontend
     - export IMAGE_TAG=1.0
   script:
@@ -51,7 +48,7 @@ stages:
       export DC_APP_PORT=$APP_PORT &&
 
       docker-compose down &&
-      docker image remove $CI_REGISTRY/sm-junior/frontend:1.0 --force &&
+      docker image remove $IMAGE_NAME:$IMAGE_TAG --force &&
       docker-compose up -d"
   environment:
     name: development
