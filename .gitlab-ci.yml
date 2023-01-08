@@ -20,7 +20,7 @@ stages:
     MICRO_SERVICE: ""
     SERVICE_VERSION: ""
   before_script:
-    - export IMAGE_NAME=$CI_REGISTRY_IMAGE/frontend
+    - export IMAGE_NAME=$CI_REGISTRY_IMAGE
     - export IMAGE_TAG=$SERVICE_VERSION
   script:
 #    - whoami
@@ -50,7 +50,7 @@ stages:
       echo registry.gitlab.com/sm-junior/frontend:1.0 && 
 
       docker-compose down &&
-      docker image remove $DC_IMAGE_NAME:$DC_IMAGE_TAG --force &&
+      docker image remove $IMAGE_NAME:$IMAGE_TAG --force &&
       docker-compose up -d"
   environment:
     name: development
