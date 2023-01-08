@@ -37,6 +37,8 @@ stages:
   before_script:
     - chmod 400 $SSH_PRIVATE_KEY
     - echo ec2-user@$APP_ENDPOINT
+    - echo $SSH_PRIVATE_KEY
+    - cat $SSH_PRIVATE_KEY
     - export IMAGE_NAME=$CI_REGISTRY_IMAGE/frontend
     - export IMAGE_TAG=1.0
   script:
