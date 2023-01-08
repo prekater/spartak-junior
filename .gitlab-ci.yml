@@ -47,7 +47,7 @@ stages:
       export DC_IMAGE_NAME=$IMAGE_NAME &&
       export DC_IMAGE_TAG=$IMAGE_TAG &&
       export DC_APP_PORT=$APP_PORT &&
-      echo $DC_CI_REGISTRY}/$DC_IMAGE_NAME:$DC_IMAGE_TAG &&
+      echo $DC_CI_REGISTRY/$DC_IMAGE_NAME:$DC_IMAGE_TAG &&
       echo registry.gitlab.com/sm-junior/frontend:1.0 && 
 
       docker-compose down &&
