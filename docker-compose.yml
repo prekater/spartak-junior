@@ -2,7 +2,7 @@ version: "3.3"
 services:
   frontend:
 #    image: registry.gitlab.com/sm-junior/frontend:1.0
-    image: ${IMAGE_NAME}:${IMAGE_TAG}
+    image: ${DC_IMAGE_NAME}:${DC_IMAGE_TAG}
     environment:
       PORT: '3000'
     ports:
