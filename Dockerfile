@@ -6,4 +6,3 @@ COPY ./ ./
 
 RUN yarn run build
 CMD yarn run start
-
