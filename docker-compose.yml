@@ -1,12 +1,5 @@
 version: "3.3"
 services:
-#  app:
-#    image: ${DC_IMAGE_NAME}:${DC_IMAGE_TAG}
-#    ports:
-#      - ${DC_APP_PORT}:${DC_APP_PORT}
-#    command:
-#      - yarn ${COMPOSE_PROJECT_NAME} start
-#
   frontend:
 #    image: registry.gitlab.com/sm-junior/frontend:1.0
     image: ${CI_REGISTRY}/sm-junior/frontend:1.0
