@@ -10,7 +10,7 @@ variables:
 image: alpine:3.15.1
 stages:
   - build
-#  - deploy
+  - deploy
 .build:
   stage: build
   tags:
