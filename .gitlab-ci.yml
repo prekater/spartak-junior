@@ -43,11 +43,10 @@ stages:
     - ssh -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ec2-user@$APP_ENDPOINT "
       docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY &&
 
-      export DC_CI_REGISTRY=$CI_REGISTRY &&
       export DC_IMAGE_NAME=$IMAGE_NAME &&
       export DC_IMAGE_TAG=$IMAGE_TAG &&
       export DC_APP_PORT=$APP_PORT &&
-      echo $DC_CI_REGISTRY/$DC_IMAGE_NAME:$DC_IMAGE_TAG &&
+      echo $IMAGE_NAME:$IMAGE_TAG &&
       echo registry.gitlab.com/sm-junior/frontend:1.0 && 
 
       docker-compose down &&
