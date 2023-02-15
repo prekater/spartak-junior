@@ -118,6 +118,7 @@
   position: relative;
   flex: 0 1 60%;
   height: 481px;
+  object-fit: contain;
 
   @include media('<xl') {
     flex: 0 0 62.6%;

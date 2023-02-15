@@ -83,8 +83,7 @@ const Gallery = () => {
             >
               <div className={fotoStyle({ item: index })}>
                 <Image
-                  objectFit="cover"
-                  layout="fill"
+                  fill
                   src={item.link}
                   loading="lazy"
                   alt="football photo"

@@ -47,3 +47,7 @@
   position: relative;
   aspect-ratio: 380/307;
 }
+
+.image {
+  object-fit: contain;
+}

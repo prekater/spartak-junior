@@ -22,12 +22,12 @@ const AboutSchool = () => {
   const root = cn('trim', styles.root)
   return (
     <section className={root}>
-      <Image src="/images/MainFootball.jpg" layout="fill" objectFit="cover" objectPosition="left center" alt="" />
+      <Image src="/images/MainFootball.jpg" fill alt="Spartak junior" className={styles.heroImage}/>
       <div className={wrapper}>
         <div className={styles.content}>
           <h3 className={styles.title}>Футбольная школа</h3>
           <div className={styles.imageWrapper}>
-            <Image src="/images/SchoolName.svg" layout="fill" objectFit="cover" alt="Спартак Юниор" />
+            <Image src="/images/SchoolName.svg" fill alt="Спартак Юниор" />
           </div>
           <h4 className={styles.subTitle}>
             Стартовала комплектация тренировочных групп на сезон 2022-2023. Количество мест в группах ограничено. Оставь заявку прямо

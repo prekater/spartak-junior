@@ -57,7 +57,7 @@ export default function Slider({ galleryLength, clickedImg, setClickedImg, stopS
           })
           return (
             <div key={index} className={classNameSlide}>
-              <Image layout="fill" src={`/images/gallery/${slideIndex}.jpg`} className={styles.img} alt="foto" />
+              <Image fill src={`/images/gallery/${slideIndex}.jpg`} className={styles.img} alt="foto" />
             </div>
           )
         })}

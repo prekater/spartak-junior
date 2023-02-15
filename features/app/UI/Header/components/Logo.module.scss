@@ -7,6 +7,7 @@
   width: 236px;
   height: 64px;
   position: relative;
+  object-fit: cover;
 
   @include media('<=xl') {
     width: 185px;

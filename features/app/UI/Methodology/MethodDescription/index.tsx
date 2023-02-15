@@ -17,7 +17,7 @@ const MethodDescription = () => {
           </p>
         </div>
         <div className={styles.wrapperImg}>
-          <Image layout="fill" objectFit="contain" src="/images/fight.png" sizes="(max-width: 1199.9px) 600px, (min-width: 1200px) 750px"  alt={""}/>
+          <Image fill src="/images/fight.png" sizes="(max-width: 1199.9px) 600px, (min-width: 1200px) 750px"  alt={""}/>
         </div>
       </div>
     </section>
