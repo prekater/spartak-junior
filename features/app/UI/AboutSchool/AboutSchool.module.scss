@@ -1,0 +1,218 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &::after {
+    bottom: -27px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  padding-left: 50px;
+
+  @include media('<lg') {
+    align-items: center;
+  }
+
+  @include media('<md') {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.title {
+  font-size: 36px;
+  line-height: 56px;
+  font-weight: 700;
+  color: var(--black-bold);
+  margin-bottom: 20px;
+
+  @include media('<xl') {
+    font-size: 34px;
+  }
+
+  @include media('<md') {
+    font-size: 20px;
+  }
+}
+
+.subTitle {
+  font-size: 22px;
+  line-height: 37px;
+  font-weight: 400;
+  color: var(--black-bold);
+  margin-bottom: 20px;
+
+  @include media('<xl') {
+    font-size: 22px;
+  }
+
+  @include media('<lg') {
+    text-align: center;
+  }
+
+  @include media('<md') {
+    font-size: 16px;
+    padding: 0 17px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 500px;
+  height: 157px;
+  margin-bottom: 20px;
+
+  @include media('<lg') {
+    width: 460px;
+    height: 144px;
+  }
+
+  @include media('<md') {
+    width: 280px;
+    height: 87px;
+  }
+}
+
+.freeLesson {
+  font-size: 20px;
+  max-width: 393px;
+  height: 55px;
+  margin-bottom: 20px;
+}
+
+// modal styles
+
+.buttonForm {
+  height: 45px;
+  font-size: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 20px 0 30px;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--bg-red);
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.input {
+  color: #222222;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 0 14px;
+  height: 50px;
+  font-size: 16px;
+  background-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1.33;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+}
+
+@keyframes movingFlare {
+  0% {
+    left: -190px;
+    margin-left: 0px;
+  }
+  100% {
+    left: 190%;
+    margin-left: 80px;
+  }
+}
+
+.buttonForm_submit {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 190px;
+    margin-left: 50px;
+    background: #fff;
+    background: linear-gradient(90deg, var(--opacity-gray-10), var(--opacity-gray-40));
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    position: absolute;
+    animation: movingFlare 3s ease-in-out 0.01s infinite;
+  }
+}
+
+.selectWrapper {
+  width: 100%;
+}
+
+.select {
+  border: 1px solid var(--silver);
+  height: 50px;
+}
+
+.errorBlock {
+  background: var(--tomato);
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--white);
+  font-size: 18px;
+
+  @include media('<=md') {
+    font-size: 14px;
+  }
+}
+
+.hide {
+  display: none;
+}

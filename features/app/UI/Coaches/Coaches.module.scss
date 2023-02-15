@@ -1,0 +1,124 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    bottom: -10px;
+  }
+
+  @include media('<md') {
+    height: 560px;
+  }
+}
+
+.commonWrapper {
+  width: 100%;
+  height: 330px;
+  background: var(--bg-red);
+  display: flex;
+  justify-content: flex-end;
+
+  @include media('<md') {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.cBlock {
+  flex: 0 0 48.6%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  @include media('<xl') {
+    flex: 0 0 51.7%;
+  }
+
+  @include media('<lg') {
+    flex: 0 0 58.3%;
+  }
+
+  @include media('<md') {
+    height: 125px;
+  }
+}
+
+.cImageBlock {
+  width: 650px;
+  position: absolute;
+  bottom: -10px;
+  right: 49.5%;
+
+  @include media('<xl') {
+    right: 50.8%;
+  }
+
+  @include media('<lg') {
+    right: 57.4%;
+  }
+
+  @include media('<md') {
+    top: 207px;
+    right: 11.6%;
+    width: 550px;
+    height: 353px;
+  }
+
+  @include media('<sm') {
+    top: 280px;
+    width: 390px;
+    height: 250px;
+  }
+}
+
+.cTextBlock {
+  display: flex;
+  height: 100%;
+  width: 560px;
+  align-items: flex-start;
+  padding-top: 75px;
+
+  @include media('<xl') {
+    width: 490px;
+  }
+
+  @include media('<lg') {
+    width: 390px;
+  }
+
+  @include media('<md') {
+    width: 440px;
+    padding-top: 60px;
+  }
+
+  @include media('<sm') {
+    width: 300px;
+    padding-top: 60px;
+  }
+}
+
+.cText {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+
+  @include media('<lg') {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  @include media('<sm') {
+    letter-spacing: 0.5px;
+  }
+}

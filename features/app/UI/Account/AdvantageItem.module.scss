@@ -1,0 +1,54 @@
+.root {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 45px;
+  width: 100%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  color: var(--black-menu);
+  margin-bottom: 10px;
+}
+
+.title_left {
+  text-align: start;
+}
+
+.title_right {
+  text-align: end;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 300;
+  color: var(--black-menu);
+}
+
+.text_left {
+  text-align: start;
+}
+
+.text_right {
+  text-align: end;
+}
+
+.icon {
+  max-width: 45px;
+  width: 100%;
+}
+
+.icon_left {
+  margin-right: 20px;
+}
+
+.icon_right {
+  margin-left: 20px;
+}

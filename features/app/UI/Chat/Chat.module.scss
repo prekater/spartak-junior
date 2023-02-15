@@ -1,0 +1,177 @@
+@import 'shared/styles/breakpoints';
+
+.commonWrapper {
+  position: fixed;
+  height: 516px;
+  width: 385px;
+  bottom: 14px;
+  right: 20px;
+  left: auto;
+  z-index: 2100;
+}
+
+.root {
+  position: fixed;
+  background-color: var(--white);
+  height: 516px;
+  width: 385px;
+  bottom: 14px;
+  right: 20px;
+  left: auto;
+  z-index: 2100;
+  border-radius: 30px;
+  border-bottom-right-radius: 6px 32px;
+  border-top-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 16px;
+  color: var(--black);
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 0 10px var(--bg-gray);
+
+  @include media('<400px') {
+    width: 320px;
+  }
+}
+
+
+
+.closeButton {
+  background: var(--red);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 0 28px 0 14.5px;
+  height: 32px;
+  width: 45px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: ' ';
+    width: 2px;
+    background-color: var(--white);
+    height: 15px;
+    border-radius: 4px;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 3px solid var(--chat-tab);
+
+  &_item {
+    width: 50%;
+    flex-grow: 1;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .tabTextWrapper {
+          background-color: var(--chat-tab);
+        }
+      }
+    }
+
+    &__active {
+      svg {
+        fill: var(--red);
+      }
+
+    }
+  }
+}
+
+.tabTextWrapper {
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+
+  svg {
+    margin-right: 4px;
+  }
+}
+
+.tabText {
+  font-size: 10px;
+  line-height: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tabUnderline {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  width: 33.33%;
+  height: 3px;
+  background-color: var(--red);
+  transition: all 0.3s ease-in;
+
+  &__right {
+    left: 66.66%;
+  }
+
+  &__center {
+    left: 33.33%;
+  }
+
+  &__left {
+    left: 0;
+  }
+}
+
+.corner {
+  height: 17px;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  bottom: 12px;
+  transform: translate(3px, 14px) scale(.8);
+  z-index: 2101;
+
+  &__withShadow {
+    z-index: 1;
+
+    &_cornerImg {
+      filter: drop-shadow(0 0 10px var(--bg-gray));
+    }
+  }
+}
+
+.cornerImg {
+  overflow: hidden;
+  margin-top: -21px;
+}
+
+

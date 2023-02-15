@@ -1,0 +1,42 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input[type=radio] {
+    display: none;
+  }
+
+  label {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    height: 54px;
+    max-width: 470px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 6%);
+    background: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--black-menu);
+    padding: 0 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input[type=radio]:checked + label {
+    background: var(--red);
+    color: var(--white);
+  }
+
+  label:hover {
+    background: var(--red);
+    color: var(--white);
+  }
+}

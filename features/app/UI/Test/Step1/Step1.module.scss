@@ -1,0 +1,21 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  display: grid;
+  padding: 30px 0 15px;
+  margin-bottom: 15px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 4px;
+    height: 32px;
+  }
+}

@@ -1,0 +1,153 @@
+@import 'shared/styles/breakpoints';
+
+.titleBanner {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 210px;
+  background: var(--bg-red);
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  @include media('<lg') {
+    height: 200px;
+  }
+  @include media('<md') {
+    height: 160px;
+  }
+  @include media('<sm') {
+    height: 150px;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 50px 70px 0;
+  align-items: flex-start;
+
+
+  @include media('<=xl') {
+    margin: 60px 170px 0;
+  }
+
+  @include media('<=lg') {
+    margin: 60px 20px 0;
+  }
+
+  @include media('<=md') {
+    margin: 45px 20px 0;
+  }
+
+  @include media('<=md') {
+    margin: 40px 32px 0;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--white);
+  font-family: 'Ubuntu', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 47px;
+  font-weight: 600;
+
+  @include media('<lg') {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  @include media('<md') {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @include media('<sm') {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.subTitle {
+  color: var(--white);
+  font-size: 20px;
+  font-family: 'Ubuntu', Arial, sans-serif;
+  line-height: 31px;
+  font-weight: 400;
+
+  @include media('<lg') {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  @include media('<md') {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  @include media('<sm') {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+
+.mainLogo {
+  position: absolute;
+  bottom: -50%;
+  right: -10%;
+  width: 700px;
+  opacity: 0.2;
+
+  @include media('<=xl') {
+    width: 640px;
+    bottom: -25%;
+    right: -35%;
+  }
+
+  @include media('<lg') {
+    width: 500px;
+    bottom: -25%;
+    right: -33%;
+  }
+
+  @include media('<md') {
+    width: 400px;
+    bottom: -5%;
+    right: -38%;
+  }
+
+  @include media('<sm') {
+    width: 310px;
+    bottom: -3%;
+    right: -40%;
+  }
+}
+
+.curveBorder {
+  overflow-x: hidden;
+  position: absolute;
+  top: 174.7px;
+  left: calc((100vw - 2560px) / 2);
+
+  @include media('<lg') {
+    top: 164.7px;
+  }
+
+  @include media('<md') {
+    top: 124.7px;
+  }
+
+  @include media('<sm') {
+    top: 114.7px;
+  }
+}
+
+.trimImg {
+  aspect-ratio: 2560/214;
+  height: 214px;
+}

@@ -1,0 +1,169 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--test-bg);
+  z-index: 2006;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.progressBar {
+  width: 100%;
+  height: 7px;
+  background-color: var(--white);
+  position: relative;
+  z-index: 2001;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.passed {
+  background-color: var(--red);
+  height: 7px;
+}
+
+.closeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  background-color: var(--red);
+  border-radius: 0 0 0 25px;
+  z-index: 2002;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: ' ';
+    width: 4px;
+    background-color: var(--white);
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  @include media('<xl') {
+    width: 37px;
+    height: 37px;
+    border-radius: 0 0 0 15px;
+
+    &::before,
+    &::after {
+      width: 3px;
+      height: 15px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.prevButton {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 25px 0;
+  background: var(--white);
+
+  svg {
+    stroke: var(--black-menu);
+  }
+
+  &:hover {
+    svg {
+      stroke: var(--red);
+    }
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--black-menu);
+  padding: 61px 15px 40px;
+  height: 100%;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+
+  &__center {
+    justify-content: center;
+  }
+}
+
+.stepNumber {
+  position: absolute;
+  top: 27px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--test-dark-gray);
+}
+
+.question  {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  max-width: 580px;
+  text-align: center;
+  margin: 0 15px 10px;
+
+  @include media('<xl') {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.description {
+  font-size: 14px;
+  line-height: 19px;
+  max-width: 580px;
+  margin: 0 15px 36px;
+  text-align: center;
+}
+
+.nextButton {
+  transition: box-shadow 0.3s ease !important;
+  outline: none;
+  flex-shrink: 0;
+  width: 274px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  height: 42px;
+  background: var(--red);
+  border: 1px solid var(--red);
+  color: var(--white);
+
+  &:disabled {
+    border: 1px solid var(--test-disabled-border);
+    color: var(--selector-flag-bg);
+    background: transparent;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  margin-bottom: 36px;
+  width: 75%;
+  aspect-ratio: 192/89;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 4px;
+    height: 32px;
+  }
+}

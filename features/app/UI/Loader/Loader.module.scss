@@ -1,0 +1,165 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  z-index: 3000;
+}
+
+.logoBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_logoWrapper {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  &_logo {
+    animation: pulse 1.6s infinite linear;
+  }
+}
+
+.textWrapper {
+  margin-top: 20px;
+}
+
+.cursor {
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+.container {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.typedOut {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 1s steps(20, end) forwards, blink .75s infinite;
+  width: 0;
+  line-height: 22px;
+  color: var(--text-gray);
+  font-size: 14px;
+  font-weight: 400;
+  border-right: 1px solid var(--text-gray);
+}
+
+.rightRedBlock {
+  animation: red 3.2s infinite linear;
+  background-color: #ff002b;
+  position: absolute;
+  display: block;
+  transform: rotate(45deg);
+  top: -2000px;
+  left: calc(100% - 3000px + 4900px);
+  width: 3000px;
+  height: 2000px;
+
+  @include media('<1199px') {
+    left: calc(100% - 3000px + 5000px);
+  }
+
+  @include media('<639px') {
+    left: calc(100% - 3000px + 5200px);
+  }
+}
+
+.leftRedBlock {
+  animation: red2 3.2s infinite linear;
+  background-color: #ff002b;
+  position: absolute;
+  display: block;
+  transform: rotate(45deg);
+  top: calc(100vh - 2000px + 2000px);
+  left: -4900px;
+  width: 3000px;
+  height: 2000px;
+
+  @include media('<1199px') {
+    left: -5000px;
+  }
+
+  @include media('<639px') {
+    top: calc(100vh - 450px + 200px);
+  }
+}
+
+@keyframes red {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(45deg);
+    animation-timing-function: linear;
+  }
+  46% {
+    transform: translateX(0px) translateY(0px) rotate(45deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(-4000px) translateY(4000px) rotate(45deg);
+  }
+}
+
+@keyframes red2 {
+  0% {
+    transform: translateX(0px) translateY(0px) rotate(45deg);
+    animation-timing-function: linear;
+  }
+  46% {
+    transform: translateX(0px) translateY(0px) rotate(45deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: translateX(4000px) translateY(-4000px) rotate(45deg);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: var(--text-gra);
+  }
+  50% {
+    border-color: transparent;
+  }
+
+  100% {
+    border-color: var(--text-gray);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: scale(1.11, 1.11);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
