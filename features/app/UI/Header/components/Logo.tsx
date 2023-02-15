@@ -12,7 +12,7 @@ const Logo = ({ isFixed }: IProps) => {
   const linkStyles = cn(styles.root, { [styles.root_fixed]: isFixed })
 
   return (
-    <Link href="/" passHref>
+    <Link href="/" passHref legacyBehavior>
       <a className={linkStyles}>
         <Image src="/images/logo/LogoSchool.svg" layout="fill" objectFit="cover" alt="Футбольная школа «Спартак Юниор»" />
       </a>

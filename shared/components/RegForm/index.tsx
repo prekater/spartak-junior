@@ -90,7 +90,7 @@ export const RegForm = ({ withBorder, formTitleClassStyle, yellowArrowClassStyle
           <span className={styles.checkboxMark} />
         </label>
         <div className={yellowArrowClassName}>
-          <Image src="/images/YellowArrow.svg" width="99px" height="99px" alt="close" />
+          <Image src="/images/YellowArrow.svg" width="99" height="99" alt="close" />
         </div>
         <button type="submit" className={styles.submitButton}>
           Записаться на просмотр
