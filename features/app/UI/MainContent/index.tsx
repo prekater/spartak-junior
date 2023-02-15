@@ -36,7 +36,6 @@ const MainContent = () => {
       <UniformStore />
       <Test />
       <BottomButton />
-      <Loader />
     </main>
   )
 }

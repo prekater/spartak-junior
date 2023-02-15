@@ -13,7 +13,7 @@ const Coaches = () => {
         <div className={styles.commonWrapper}>
           <div className={styles.cBlock}>
             <div className={styles.cImageBlock}>
-              <Image width={650} height={417} src="/images/coach1.png" />
+              <Image width={650} height={417} src="/images/coach1.png"  alt={""}/>
             </div>
             <div className={styles.cTextBlock}>
               <p className={styles.cText}>

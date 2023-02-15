@@ -9,6 +9,11 @@ import Footer from 'features/app/UI/Footer/'
 
 import styles from './Home.module.scss'
 
+export async function getStaticProps() {
+    return {
+        props: {},
+    }
+}
 const Home = () => {
     return (
         <>
@@ -21,8 +26,6 @@ const Home = () => {
                 <title>Футбольная школа «Спартак-Юниор» в Москве</title>
             </Head>
             {/*  скрипт для анимации в галерее*/}
-            <Script src="wow.min.js"/>
-            <script>new WOW().init();</script>
             <div className={styles.root}>
                 <Header/>
                 <MainContent/>

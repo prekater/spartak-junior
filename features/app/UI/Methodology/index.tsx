@@ -21,7 +21,7 @@ const Methodology = () => {
             </p>
           </div>
           <div className={styles.wrapperImg}>
-            <Image layout="fill" objectFit="contain" src="/images/Label.svg" />
+            <Image layout="fill" objectFit="contain" src="/images/Label.svg"  alt={""}/>
           </div>
         </div>
       </section>
