@@ -1,0 +1,267 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  width: 100%;
+}
+
+.root_fixedIfModal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+}
+
+.root_fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  animation-name: show_header;
+  animation-duration: 1s;
+}
+
+@keyframes show_header {
+  0% {
+    opacity: 0;
+    top: -70px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 20px;
+
+  @include media('<=xl') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media('<=xl') {
+    display: none;
+  }
+}
+
+.navBarBtn {
+  width: 28px;
+  height: 40px;
+  background: none;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 28px;
+    height: 3px;
+    background-color: var(--black-bold);
+    box-shadow: 0 8px var(--black-bold), 0 -8px var(--black-bold);
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 28px;
+    height: 3px;
+    background-color: var(--black-bold);
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  @include media('>xl') {
+    display: none;
+  }
+}
+
+.navBarBtn_close {
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.modalNavBar {
+  position: fixed;
+  background-color: var(--white);
+  top: 59px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 50% 30%;
+  grid-template-areas:
+    '.'
+    'navigation'
+    'phone';
+
+  @include media('>xl') {
+    display: none;
+  }
+}
+
+.fixed {
+  height: 103px;
+}
+
+.freeLesson {
+  flex: 0 1 20%;
+}
+
+// modal styles
+
+.buttonForm {
+  height: 45px;
+  font-size: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--white);
+  background-color: var(--red);
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 20px 0 30px;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--bg-red);
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.input {
+  color: #222222;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 0 14px;
+  height: 50px;
+  font-size: 16px;
+  background-color: transparent;
+  margin-bottom: 20px;
+  line-height: 1.33;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+}
+
+@keyframes movingFlare {
+  0% {
+    left: -190px;
+    margin-left: 0px;
+  }
+  100% {
+    left: 190%;
+    margin-left: 80px;
+  }
+}
+
+.buttonForm_submit {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 190px;
+    margin-left: 50px;
+    background: #fff;
+    background: linear-gradient(90deg, var(--opacity-gray-10), var(--opacity-gray-40));
+    left: -40px;
+    top: -100px;
+    z-index: 1;
+    transform: rotate(45deg);
+    position: absolute;
+    animation: movingFlare 3s ease-in-out 0.01s infinite;
+  }
+}
+
+.selectWrapper {
+  width: 100%;
+}
+
+.select {
+  border: 1px solid var(--silver);
+  height: 50px;
+}
+
+.errorBlock {
+  background: var(--tomato);
+  padding: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--white);
+  font-size: 18px;
+
+  @include media('<=md') {
+    font-size: 14px;
+  }
+}
+
+.hide {
+  display: none;
+}

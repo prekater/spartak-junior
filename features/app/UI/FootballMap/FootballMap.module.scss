@@ -1,0 +1,16 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  max-width: 1160px;
+  width: 100%;
+  height: 636px;
+  position: relative;
+  margin: 75px auto;
+  z-index: 3;
+
+  @include media('<xl') {
+    max-width: 1000px;
+    padding-top: 50%;
+    height: auto;
+  }
+}

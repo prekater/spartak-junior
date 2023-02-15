@@ -1,0 +1,56 @@
+@import "./fonts.css";
+@import "./colors.css";
+@import "./clear.css";
+
+
+h1, h2, h3, h4, h5, h6 {
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+.svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+body,html {
+    min-height: 100%;
+    font-family: Ubuntu, Arial, sans-serif;
+
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.trim::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-image: url('/images/Trim.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

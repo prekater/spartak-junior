@@ -1,0 +1,78 @@
+@import 'shared/styles/breakpoints';
+
+.operatorMsg {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 9px;
+  width: 100%;
+}
+
+.iconAndTime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.operatorAvatarWrapper {
+  position: relative;
+  width: 34px;
+  height: 34px;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background: var(--chat-online);
+  }
+
+  &:hover .tooltip {
+    visibility: visible;
+  }
+}
+
+.tooltip {
+  visibility: hidden;
+  box-shadow: var(--chat-shadow);
+  text-align: center;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 10px;
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  top: 100%;
+  left: 0;
+}
+
+.operatorAvatar {
+  border-radius: 50%;
+}
+
+.time {
+  line-height: 11px;
+  color: var(--chat-time-color);
+  font-size: 10px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.msgBlock {
+  background: var(--chat-text-bg);
+  margin-left: 19px;
+  border-radius: 0 8px 8px;
+  padding: 14px 20px;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: left;
+
+  @include media('<400px') {
+    margin-left: 8px;
+    padding: 8px 12px;
+  }
+}

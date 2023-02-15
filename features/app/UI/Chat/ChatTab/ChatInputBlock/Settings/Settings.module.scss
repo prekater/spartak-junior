@@ -1,0 +1,90 @@
+@import 'shared/styles/breakpoints';
+
+.bottomButton {
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--chat-btn-hover);
+    }
+  }
+
+  &:active {
+    background-color: var(--chat-user-bg);
+  }
+}
+
+.settingsPopup {
+  transition: width .3s, height .3s;
+  width: 159px;
+  height: 62px;
+  border-radius: 8px;
+  border-bottom-left-radius: 7px 22px;
+  z-index: 999;
+  position: absolute;
+  left: -10px;
+  bottom: 31px;
+  box-shadow: 0 0 25px 0 rgb(0 0 1 / 10%);
+  padding: 5px 6px;
+  display: block;
+  background: var(--white);
+  text-align: left;
+
+  &__sendEmail {
+    width: 178px;
+    height: 107px;
+  }
+
+  &_corner {
+    height: 17px;
+    position: absolute;
+    padding: 0;
+    left: -7px;
+    top: -32px;
+    transform: scaleX(-1) translate(3px, 14px) scale(.8);
+    right: auto;
+    z-index: 1000;
+  }
+
+  &_cornerImg {
+    overflow: hidden;
+    margin-top: -21px;
+  }
+
+  &__withShadow {
+    z-index: 1;
+
+    &_cornerImg {
+      filter: drop-shadow(0 0 16px rgba(0, 0, 0, .15));
+    }
+  }
+
+  &_item {
+    height: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 9.95px;
+    color: var(--black);
+    border-radius: 16px;
+    text-decoration: underline;
+    background: none;
+    min-width: 28px;
+    padding: 0 10px;
+    white-space: nowrap;
+    cursor: pointer;
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--chat-btn-hover);
+      }
+    }
+  }
+}

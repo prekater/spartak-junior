@@ -1,0 +1,155 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.commonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1270px;
+  height: 490px;
+  margin: 0 auto;
+  padding-left: 20px;
+
+  @include media('<xl') {
+    justify-content: start;
+    width: 1000px;
+    height: 360px;
+    padding-left: 10px;
+  }
+
+  @include media('<lg') {
+    flex-direction: column;
+    max-width: 620px;
+    height: 730px;
+    padding: 0;
+  }
+
+  @include media('<md') {
+    max-width: 460px;
+    height: 630px;
+  }
+
+  @include media('<sm') {
+    max-width: 300px;
+    height: 650px;
+  }
+}
+
+.wrapperFlexText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 1 41%;
+
+  @include media('<xl') {
+    flex: 0 0 48.5%;
+  }
+
+  @include media('<lg') {
+    flex: 0 0 42.7%;
+    width: 100%;
+    justify-content: start;
+    margin-top: 17px;
+    margin-bottom: 16px;
+  }
+  @include media('<md') {
+    flex: 0 0 47.4%;
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  @include media('<sm') {
+    flex: 0 0 67.2%;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.firstText {
+  color: var(--black-menu);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  margin-bottom: 28px;
+
+  @include media('<xl') {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 26px;
+  }
+
+  @include media('<md') {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 23px;
+  }
+}
+
+.secondText {
+  color: var(--black-menu);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  margin-bottom: 28px;
+
+  @include media('<xl') {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 26px;
+  }
+
+  @include media('<md') {
+    font-size: 15px;
+    line-height: 23px;
+    margin-bottom: 23px;
+  }
+}
+
+.thirdText {
+  color: var(--black-menu);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+
+  @include media('<xl') {
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  @include media('<md') {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+
+.wrapperImg {
+  display: flex;
+  position: relative;
+  flex: 0 1 61.5%;
+  height: 481px;
+
+  @include media('<xl') {
+    flex: 0 0 50.5%;
+    height: 321px;
+  }
+
+  @include media('<lg') {
+    flex: 0 0 52.7%;
+    width: 97%;
+  }
+
+  @include media('<md') {
+    flex: 0 0 46.8%;
+    width: 100%;
+  }
+
+  @include media('<sm') {
+    flex: 0 0 31.5%;
+    width: 100%;
+  }
+}

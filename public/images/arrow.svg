@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="4px" viewBox="0 0 6 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Interface / 16 / chevron-down</title>
+    <g id="Ratings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440/Rating" transform="translate(-754.000000, -242.000000)">
+            <g id="rating" transform="translate(103.000000, 113.000000)">
+                <g id="table" transform="translate(0.000000, 108.000000)">
+                    <g id="headline" transform="translate(8.000000, 0.000000)">
+                        <g id="numbers" transform="translate(594.000000, 0.000000)">
+                            <g id="Interface-/-16-/-triangle-up" transform="translate(44.000000, 15.000000)">
+                                <rect id="Rectangle" x="0" y="0" width="16" height="16"/>
+                                <polygon id="Path" fill="#9CA5AE" transform="translate(8.000000, 8.000000) scale(1, -1) translate(-8.000000, -8.000000) " points="5 9.75 8 6.25 11 9.75"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

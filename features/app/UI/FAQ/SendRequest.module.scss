@@ -1,0 +1,77 @@
+@import 'shared/styles/breakpoints';
+
+.description {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black-menu);
+  margin-bottom: 25px;
+}
+
+.radioWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.radioButton {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--black);
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all 0.2s;
+  opacity: 0.6;
+  z-index: -1;
+
+  &:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--black);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    transition: all 0.2s;
+  }
+}
+
+.inputHide {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  margin: 3px 3px 0px 5px;
+
+  &:checked ~ .radioButton {
+    opacity: 1;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.labelRadio {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--black-menu);
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    margin: 3px auto 10px 0;
+  }
+
+  @include media('<=md') {
+    font-size: 12px;
+  }
+}

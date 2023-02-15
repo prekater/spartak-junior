@@ -1,0 +1,38 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  display: flex;
+  flex: 0 1 20%;
+  justify-content: center;
+  align-items: center;
+  grid-area: phone;
+}
+
+.phoneLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black-menu);
+
+  @include media('<=xl') {
+    font-size: 24px;
+    color: var(--bg-red);
+  }
+}
+
+.phoneText {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+
+  @include media('>xl') {
+    display: none;
+  }
+}

@@ -1,0 +1,122 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 2005;
+
+  @include media('<=md') {
+    padding: 0 20px;
+  }
+}
+
+.closeButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 43px;
+  height: 43px;
+  border: none;
+  background-color: transparent;
+  z-index: 2002;
+
+  &::before,
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 8px;
+    height: 30px;
+    width: 2px;
+    background-color: var(--white);
+    transition: all 0.3s;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    content: ' ';
+    transform: rotate(-45deg);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::before,
+      &:after {
+        background-color: var(--bg-gray);
+      }
+    }
+  }
+}
+
+.textWrapper {
+  margin: 65px auto;
+  padding: 40px 45px 16px;
+  text-align: left;
+  background-color: var(--popup-text-bg);
+  max-width: 960px;
+  font-size: 14px;
+  line-height: 1.55;
+
+  @include media('<=xl') {
+    max-width: 780px;
+    font-size: 12px;
+  }
+
+  @include media('<=md') {
+    max-width: 100%;
+    padding: 20px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+}
+
+.textHeader {
+  font-size: 30px;
+  line-height: 1.17;
+  font-weight: 700;
+  color: var(--black-bold);
+  margin-bottom: 17px;
+  text-align: center;
+
+  @include media('<=xl') {
+    font-size: 28px;
+  }
+
+  @include media('<=md') {
+    font-size: 24px;
+  }
+}
+
+.orderedList {
+  list-style: none;
+  counter-reset: li;
+}
+
+.listItem {
+  font-weight: 400;
+
+  &:before {
+    counter-increment: li;
+    content: counters(li, '.') '. ';
+  }
+
+  &_bold {
+    font-weight: 700;
+  }
+}
+
+.unorderedList {
+  margin-top: 24px;
+}
+
+.unorderedListItem {
+  list-style: inside;
+}

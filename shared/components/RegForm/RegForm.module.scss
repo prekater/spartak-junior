@@ -1,0 +1,201 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formTitle {
+  line-height: 28px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 30px 50px;
+  position: relative;
+
+  &__withBorder {
+    border: 7px solid var(--white);
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  @include media('<sm') {
+    padding: 30px 25px;
+  }
+}
+
+.textInput {
+  height: 50px;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 20px;
+  width: 340px;
+
+  @include media('<sm') {
+    width: 280px;
+  }
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.phoneSelector {
+  margin-bottom: 0;
+}
+
+.phoneSelectorInput {
+  border: none;
+  height: 50px;
+  width: 340px;
+
+  @include media('<sm') {
+    width: 280px;
+  }
+}
+
+.phoneSelectorMenu {
+  @include media('<=md') {
+    width: auto;
+  }
+}
+
+.selectInput {
+  height: 50px;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0 35px 0 20px;
+  width: 340px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: var(--gray);
+
+  @include media('<sm') {
+    width: 280px;
+  }
+}
+
+.arrow {
+  content: " ";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: var(--black) transparent transparent transparent;
+}
+
+.checkboxMark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 2px solid var(--white);
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  transition: all .2s;
+  border-radius: 3px;
+  opacity: 0.6;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+}
+
+.checkboxLabel {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--white);
+
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .checkboxMark {
+      opacity: 1;
+    }
+
+    &:checked ~ .checkboxMark:after {
+      display: block;
+    }
+  }
+}
+
+.submitButton {
+  color: var(--black-bold);
+  background-color: var(--white);
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 30%);
+  width: 340px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  display: block;
+  text-transform: uppercase;
+
+  @include media('<sm') {
+    width: 280px;
+  }
+}
+
+.agreement {
+  border-bottom: 1px solid var(--white);
+  margin-left: 1ch;
+}
+
+.yellowArrowWrapper {
+  position: absolute;
+  transform: rotate(315deg);
+  right: -5px;
+  bottom: 65px;
+  width: 70px;
+  z-index: 1;
+
+  @include media('<sm') {
+    width: 45px;
+    right: 10px;
+    bottom: 77px;
+  }
+}

@@ -1,0 +1,25 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 30px;
+  width: 236px;
+  height: 64px;
+  position: relative;
+
+  @include media('<=xl') {
+    width: 185px;
+    height: 50px;
+  }
+}
+
+.root_fixed {
+  width: 180px;
+  height: 49px;
+
+  @include media('<=xl') {
+    width: 185px;
+    height: 50px;
+  }
+}

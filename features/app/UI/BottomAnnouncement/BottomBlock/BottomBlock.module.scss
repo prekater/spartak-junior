@@ -1,0 +1,61 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  width: 100%;
+  position: fixed;
+  background-color: var(--bg-red);
+  height: 60px;
+  bottom: -60px;
+  left: 0;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0%);
+  z-index: 100;
+  transition: bottom 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 80px;
+
+  @include media('<lg') {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 40px;
+    text-align: center;
+  }
+
+  &_shown {
+    bottom: 0;
+  }
+}
+
+.text {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 24.8px;
+  font-weight: 600;
+
+  @include media('<lg') {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+  }
+}
+
+.button {
+  margin-left: 20px;
+  text-transform: uppercase;
+  color: var(--bg-red);
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 35px;
+  font-size: 13px;
+  padding: 0 20px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+
+  @include media('<lg') {
+    padding: 0 20px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

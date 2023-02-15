@@ -1,0 +1,94 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 120px 0 45px;
+
+  @include media('<sm') {
+    padding: 90px 0 45px;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.23;
+  padding-top: 8px;
+  padding-bottom: 3px;
+  color: var(--black-menu);
+
+  @include media('<lg') {
+    font-size: 60px;
+  }
+
+  @include media('<md') {
+    font-size: 30px;
+  }
+
+  @include media('<sm') {
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+.imageList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px 10px;
+  width: 100%;
+}
+
+.link {
+  width: 25%;
+  padding: 10px 5px 0;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+
+  @include media('<lg') {
+    width: 50%;
+  }
+}
+
+//height изображения вычисляется исходя из ширины экрана делённой на количество элементов,
+//которые должны быть в ряду.Также вычитаются padding слева и справа.
+//Таким образом вычисляется ширина изображения при определённой ширине экрана...
+//Далее результат(ширина изображения) умножается на коэфициент,
+//отношения высоты изображения к ширине изображения(так называемый процент,в зависимости от ширины экрана он разный)
+
+.wrapperImage {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: calc(((100vw / 4) - 10px) * 1.32);
+
+  @include media('<lg') {
+    height: calc(((100vw / 2) - 10px) * 1.312);
+  }
+
+  @include media('<md') {
+    height: calc(((100vw / 2) - 10px) * 1.306);
+  }
+}
+
+.wrapperImage_albom {
+  height: calc(((100vw / 4) - 10px) * 0.744);
+
+  @include media('<lg') {
+    height: calc(((100vw / 2) - 10px) * 0.741);
+  }
+
+  @include media('<md') {
+    height: calc(((100vw / 2) - 10px) * 0.736);
+  }
+}

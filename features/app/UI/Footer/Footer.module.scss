@@ -1,0 +1,153 @@
+@import '../../../../shared/styles/breakpoints';
+
+.root {
+  background-color: var(--bg-red);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 100px;
+}
+
+.logo {
+  position: absolute;
+  top: -50px;
+  width: 200px;
+}
+
+.curveBorder {
+  overflow-x: hidden;
+  transform: rotate(180deg);
+  position: absolute;
+  top: -110px;
+}
+
+.trimImg {
+  aspect-ratio: 2560/214;
+  height: 140px;
+}
+
+.footer {
+  margin-top: 15px;
+  width: 100%;
+  padding: 30px 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media('<lg') {
+    padding: 30px 20px 140px;
+  }
+}
+
+.textWrapper {
+  max-width: 1200px;
+  width: 100%;
+  color: var(--white);
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 600;
+
+  @include media('<=xl') {
+    max-width: 960px;
+    font-size: 10px;
+  }
+
+  @include media('<=lg') {
+    max-width: 640px;
+  }
+}
+
+.politicsLink {
+  border-bottom: 1px solid var(--white);
+  cursor: pointer;
+}
+
+.wrapperFooterContent {
+  width: 100%;
+  position: relative;
+  max-width: 1200px;
+}
+
+.animatedLogo {
+  opacity: 0.2;
+  left: -19%;
+  top: 50px;
+  width: 650px;
+  position: absolute;
+  z-index: 1;
+  animation: leftLogo 1.4s infinite linear;
+
+  @include media('<=xl') {
+    left: -30%;
+    width: 700px;
+  }
+
+  @include media('<=lg') {
+    left: -21%;
+    width: 500px;
+    top: 100px;
+  }
+
+  @include media('<=md') {
+    left: -58%;
+  }
+
+  @include media('<=md') {
+    width: 400px;
+  }
+
+  @include media('<=sm') {
+    top: 160px;
+    left: -73%;
+    width: 310px;
+  }
+
+  &__right {
+    left: unset;
+    right: -19%;
+    animation: rightLogo 1.4s infinite linear;
+
+    @include media('<=xl') {
+      right: -30%;
+    }
+
+    @include media('<=lg') {
+      right: -21%;
+    }
+
+    @include media('<=md') {
+      right: -58%;
+    }
+
+    @include media('<=sm') {
+      right: -73%;
+    }
+  }
+}
+
+@keyframes leftLogo {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rightLogo {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

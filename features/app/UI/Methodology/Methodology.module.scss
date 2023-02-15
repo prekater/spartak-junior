@@ -1,0 +1,111 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  width: 100%;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/images/arena.jpg') 30% 50% / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.wrapperContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 920px;
+  height: 650px;
+  margin: 0 auto;
+  padding: 60px 0 80px;
+
+  @include media('<xl') {
+    max-width: 740px;
+  }
+
+  @include media('<lg') {
+    max-width: 600px;
+  }
+
+  @include media('<md') {
+    max-width: 599px;
+  }
+
+  @include media('<sm') {
+    max-width: 439px;
+  }
+}
+
+.wrapperText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  margin-bottom: 48px;
+  @include media('<lg') {
+    margin-bottom: 44px;
+  }
+
+  @include media('<md') {
+    margin-bottom: 32px;
+  }
+}
+
+.firstText {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 64px;
+  color: var(--white);
+  padding: 0 20px;
+
+  @include media('<xl') {
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  @include media('<md') {
+    margin-bottom: 18px;
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+.secondText {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  color: var(--white);
+  padding: 0 20px;
+
+  @include media('<xl') {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  @include media('<md') {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+.wrapperImg {
+  display: flex;
+  position: relative;
+  width: 160px;
+  height: 99px;
+
+  @include media('<xl') {
+    width: 140px;
+    height: 96px;
+  }
+
+  @include media('<lg') {
+    width: 200px;
+    height: 124px;
+  }
+
+  @include media('<md') {
+    width: 180px;
+    height: 111px;
+  }
+}

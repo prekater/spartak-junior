@@ -1,0 +1,80 @@
+.wrapper {
+  padding: 23px 19px 28px 19px;
+  height: calc(100% - 48px);
+  overflow: auto;
+}
+
+.description {
+  padding: 0 10px;
+  margin: 2px 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--chat-form-text);
+  text-align: left;
+}
+
+.form {
+  margin-top: 10px;
+  position: relative;
+}
+
+.textarea {
+  resize: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 12px;
+  padding: 8px 10px;
+  color: var(--chat-form-text);
+  margin-bottom: 10px;
+  outline: 0;
+  background-color: var(--chat-form-input-bg);
+  border: 1px solid var(--test-disabled-border);
+  border-radius: 18px;
+  width: 100%;
+  height: 96px;
+}
+
+.input {
+  background-color: var(--chat-form-input-bg);
+  border: 1px solid var(--test-disabled-border);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--chat-form-text);
+  box-shadow: none;
+  min-height: 31px;
+  padding: 0 16px 0 10px;
+  border-radius: 18px;
+  width: calc(50% - 5px);
+  margin: 10px 0 0;
+
+  &:last-of-type {
+    margin: 10px 0 0 10px;
+  }
+}
+
+.redDot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--red);
+  border-radius: 50%;
+  content: '';
+  right: 0;
+  bottom: 93px;
+}
+
+.button {
+  text-align: center;
+  background-color: var(--red);
+  font-weight: 600;
+  line-height: normal;
+  padding: 11px 0;
+  width: 207px;
+  border-radius: 42px;
+  box-shadow: 0 0 17px rgba(0, 0, 0, .15);
+  border: 0;
+  font-size: 14px;
+  margin-top: 24px;
+  color: var(--white);
+}

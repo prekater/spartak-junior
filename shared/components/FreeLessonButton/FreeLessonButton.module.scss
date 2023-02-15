@@ -1,0 +1,26 @@
+@import 'shared/styles/breakpoints';
+
+.root {
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include media('<=lg') {
+    margin-top: 10px !important;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--bg-red);
+    }
+  }
+}
