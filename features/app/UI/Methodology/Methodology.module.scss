@@ -93,6 +93,7 @@
   position: relative;
   width: 160px;
   height: 99px;
+  object-fit: contain;
 
   @include media('<xl') {
     width: 140px;

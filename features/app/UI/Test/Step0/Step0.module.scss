@@ -5,6 +5,7 @@
   width: 75%;
   aspect-ratio: 192/89;
   position: relative;
+  object-fit: contain;
 
   &::-webkit-scrollbar {
     width: 4px;

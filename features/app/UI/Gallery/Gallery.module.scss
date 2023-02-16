@@ -71,6 +71,7 @@
   cursor: pointer;
   width: 100%;
   height: calc(((100vw / 4) - 10px) * 1.32);
+  object-fit: cover;
 
   @include media('<lg') {
     height: calc(((100vw / 2) - 10px) * 1.312);
