@@ -26,7 +26,7 @@ const ComeToView = () => {
           >
             Яндекс Карты — транспорт, навигация, поиск мест
           </a>
-          <iframe src="https://yandex.ru/map-widget/v1/-/CCUfzLdd2B" width="660" height="540" allowFullScreen className={styles.iframe} />
+          <iframe src="https://yandex.ru/map-widget/v1/-/CCUfzLdd2B" loading="lazy" width="660" height="540" allowFullScreen className={styles.iframe} />
         </div>
         <div className={styles.formBlock}>
           <RegForm formTitleClassStyle={styles.formTitle} yellowArrowClassStyle={styles.formYellowArrow} />
