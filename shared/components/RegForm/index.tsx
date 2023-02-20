@@ -85,7 +85,7 @@ export const RegForm = ({ withBorder, formTitleClassStyle, yellowArrowClassStyle
         <label className={styles.checkboxLabel}>
           <input type="checkbox" name="isAgree" checked={formValues.isAgree} onChange={handleChangeCheckbox} />Я принимаю
           <span className={styles.agreement} onClick={handleShowAgreement(true)}>
-            Условия cоглашения
+            Условия соглашения
           </span>
           <span className={styles.checkboxMark} />
         </label>

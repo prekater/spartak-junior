@@ -1,7 +1,7 @@
 import React from 'react'
 
 import cn from 'clsx'
-
+import Image from 'next/image'
 import TitleBanner from 'shared/components/TitleBanner'
 
 import { RegForm } from '../../../../shared/components/RegForm'
@@ -31,7 +31,7 @@ const ComeToView = () => {
         <div className={styles.formBlock}>
           <RegForm formTitleClassStyle={styles.formTitle} yellowArrowClassStyle={styles.formYellowArrow} />
           <div className={styles.curveBorder}>
-            <img src="/images/Trim.svg" className={styles.trimImg} />
+            <Image src="/images/Trim.svg"  alt='' fill />
           </div>
         </div>
       </div>
