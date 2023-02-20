@@ -15,7 +15,7 @@ const AppContainer = ({ children }: IProps): JSX.Element => {
     <ScrollControlProvider>
       <TestProvider>
         <NavigationProvider>
-          <div className={styles.root} >{children}</div>
+          <div className={styles.root}>{children}</div>
         </NavigationProvider>
       </TestProvider>
     </ScrollControlProvider>
