@@ -8,6 +8,7 @@ import { Input } from '../Input'
 import { useCountryList, ICountryList } from './useCountryList'
 
 import styles from './Selector.module.scss'
+import Image from "next/image";
 
 const itemToString = (useCountryList: ICountryList | null) => {
   return useCountryList ? useCountryList.countryCode : ''
@@ -21,7 +22,7 @@ interface IProps {
 }
 
 export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInputClassName, phoneSelectorMenuClassName }: IProps) => {
-  const { isOpen, selectedItem, getToggleButtonProps, getLabelProps, getMenuProps, highlightedIndex, getItemProps } = useSelect({
+  const { isOpen, selectedItem, getToggleButtonProps, getMenuProps, highlightedIndex, getItemProps } = useSelect({
     items: useCountryList,
     itemToString
   })
@@ -38,7 +39,7 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
     <div className={selectorWrapperStyle}>
       <div className={selectorInputStyle}>
         <button className={styles.selectButton} type="button" {...getToggleButtonProps()}>
-          <img src={selectedItem ? selectedItem.icon : '/images/flags/russia.svg'} className={styles.flag} />
+          <Image src={selectedItem ? selectedItem.icon : '/images/flags/russia.svg'} className={styles.flag} alt={selectedItem?.title || 'flag'} width={18} height={13}/>
           <span className={styles.arrowButton} />
           {selectedItem ? itemToString(selectedItem) : '+7'}
         </button>
@@ -51,7 +52,7 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
       <span className={clsx(styles.errorText, styles.hide)}>Обязательное поле</span>
       {isOpen && (
         <div className={selectorMenuStyle}>
-          <ul {...getMenuProps({ refKey: 'ulRef' }, { suppressRefError: true })} ref={ulRef} className={styles.list}>
+          <ul ref={ulRef} className={styles.list}>
             {useCountryList.map((item, index) => (
               <li
                 className={styles.itemSelect}
@@ -62,7 +63,7 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
                 <span>{item.title}</span>
                 <div className={styles.codeWrapper}>
                   <span className={styles.margin}>{item.countryCode}</span>
-                  <img className={cn(styles.margin, styles.flag)} src={item.icon} />
+                  <Image className={cn(styles.margin, styles.flag)} src={item.icon} alt={item.title} width={18} height={13}/>
                 </div>
               </li>
             ))}

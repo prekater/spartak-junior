@@ -52,8 +52,6 @@ const disableBodyScroll = (ref: MutableRefObject<string | null>) => {
 export const ScrollControlProvider = ({ children }: IOwnProps) => {
   const previousBodyPaddingRightRef = useRef<string | null>(null)
 
-  const target = createRef<HTMLElement>()
-
   const toggleScroll = (param: boolean) => {
     if (param) {
       enableBodyScroll(previousBodyPaddingRightRef)
@@ -62,5 +60,5 @@ export const ScrollControlProvider = ({ children }: IOwnProps) => {
     }
   }
 
-  return <ScrollControlContext.Provider value={{ toggleScroll }}>{cloneElement(children, { ref: target })}</ScrollControlContext.Provider>
+  return <ScrollControlContext.Provider value={{ toggleScroll }}>{cloneElement(children)}</ScrollControlContext.Provider>
 }

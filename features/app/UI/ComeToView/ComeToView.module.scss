@@ -121,6 +121,8 @@
   overflow-x: hidden;
   position: absolute;
   top: 507px;
+  aspect-ratio: 2560/214;
+  height: 214px;
 
   @include media('<xl') {
     top: 466px;
@@ -135,10 +137,4 @@
     top: 467px;
     right: -924px;
   }
-}
-
-.trimImg {
-  aspect-ratio: 2560/214;
-  height: 214px;
-
 }
