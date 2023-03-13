@@ -59,6 +59,8 @@
 }
 
 .image {
+  object-fit: contain;
+  position: relative !important;
   display: block;
   width: 100%;
   box-sizing: border-box;
