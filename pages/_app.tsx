@@ -10,4 +10,5 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
   </AppContainer>
 )
 
+
 export default MyApp
