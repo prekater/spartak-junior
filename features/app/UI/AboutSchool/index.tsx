@@ -22,7 +22,7 @@ const AboutSchool = () => {
   const root = cn('trim', styles.root)
   return (
     <section className={root}>
-      <Image src="/images/MainFootball.jpg" fill alt="Spartak junior" className={styles.heroImage}/>
+      <Image src="/images/MainFootball.jpg" fill alt="Spartak junior" className={styles.heroImage} priority/>
       <div className={wrapper}>
         <div className={styles.content}>
           <h3 className={styles.title}>Футбольная школа</h3>

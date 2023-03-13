@@ -7,6 +7,7 @@ import { useMedia } from 'features/app/hooks/useMedia'
 import AdvantageItem from './AdvantageItem'
 
 import styles from './Advantages.module.scss'
+import Image from "next/image";
 
 interface IProps {
   title: string
@@ -60,7 +61,13 @@ const Advantages = () => {
         ))}
       </div>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src="/images/mobile.png" alt="advantages" />
+          <Image
+              fill
+              src="/images/Mobile.png"
+              alt="advantages"
+              className={styles.image}
+              sizes="(max-width: 959.9px) 640px, (min-width: 960px) 540px"
+          />
       </div>
       <div className={blockStyle}>
         {arrayItems.slice(3, 6).map((item, index) => (
