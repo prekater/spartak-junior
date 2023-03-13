@@ -27,12 +27,12 @@ const AdviceAndTest = () => {
           <button className={styles.buttonModal} onClick={() => onChangeOpenTest(true)}>
             Пройти тест
             <div className={styles.roundArrow}>
-              <Image layout="fill" objectFit="cover" src="/images/round-arrow.svg" alt="round arrow" />
+              <Image fill src="/images/round-arrow.svg" alt="round arrow" />
             </div>
           </button>
         </div>
         <div className={styles.contentBanner}>
-          <Image layout="fill" objectFit="cover" src="/images/AdviceImage.png" alt="advice image" />
+          <Image fill src="/images/AdviceImage.png" alt="advice image" sizes="(max-width: 479.9px) 100vw, (min-width: 478px) 800px"/>
         </div>
       </div>
     </section>

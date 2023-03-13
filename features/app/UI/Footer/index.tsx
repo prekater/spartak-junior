@@ -42,7 +42,7 @@ const Footer = () => {
           </span>
         </div>
         <a href="https://vk.com/futbolnaya_shkola_spartak_junior" target="_blank" rel="noreferrer">
-          <Image src="/images/social/VK.svg" width="30" height="30" layout="fixed" alt="Футбольная школа «Спартак Юниор»" />
+          <Image src="/images/social/VK.svg" width="30" height="30" alt="Футбольная школа «Спартак Юниор»" />
         </a>
         {isShowPolitics && <AgreementPopup handleClose={handleShowPolitics(false)} />}
       </div>

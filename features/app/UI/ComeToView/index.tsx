@@ -1,7 +1,7 @@
 import React from 'react'
 
 import cn from 'clsx'
-
+import Image from 'next/image'
 import TitleBanner from 'shared/components/TitleBanner'
 
 import { RegForm } from '../../../../shared/components/RegForm'
@@ -26,12 +26,12 @@ const ComeToView = () => {
           >
             Яндекс Карты — транспорт, навигация, поиск мест
           </a>
-          <iframe src="https://yandex.ru/map-widget/v1/-/CCUfzLdd2B" width="660" height="540" allowFullScreen className={styles.iframe} />
+          <iframe src="https://yandex.ru/map-widget/v1/-/CCUfzLdd2B" loading="lazy" width="660" height="540" allowFullScreen className={styles.iframe} />
         </div>
         <div className={styles.formBlock}>
           <RegForm formTitleClassStyle={styles.formTitle} yellowArrowClassStyle={styles.formYellowArrow} />
           <div className={styles.curveBorder}>
-            <img src="/images/Trim.svg" className={styles.trimImg} />
+            <Image src="/images/Trim.svg"  alt='' fill />
           </div>
         </div>
       </div>

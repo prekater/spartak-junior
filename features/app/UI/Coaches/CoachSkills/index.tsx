@@ -21,7 +21,7 @@ const CoachSkills = () => {
           </p>
         </div>
         <div className={styles.wrapperImg}>
-          <Image layout="fill" objectFit="contain" src="/images/coach2.png"  alt={""}/>
+          <Image fill src="/images/coach2.png" alt="coach"/>
         </div>
       </div>
     </div>

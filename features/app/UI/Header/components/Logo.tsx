@@ -14,7 +14,7 @@ const Logo = ({ isFixed }: IProps) => {
   return (
     <Link href="/" passHref legacyBehavior>
       <a className={linkStyles}>
-        <Image src="/images/logo/LogoSchool.svg" layout="fill" objectFit="cover" alt="Футбольная школа «Спартак Юниор»" />
+        <Image src="/images/logo/LogoSchool.svg" fill alt="Футбольная школа «Спартак Юниор»" />
       </a>
     </Link>
   )
