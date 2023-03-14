@@ -10,14 +10,14 @@ export const useCountryList: ICountryList[] = [
     title: 'Azerbaijan (Azərbaycan)',
     countryCode: '+994',
     placeholder: '99-999-99-99',
-    icon: '/images/flags/Azerbaijan.svg'
+    icon: '/images/flags/azerbaijan.svg'
   },
 
   {
     title: 'Belarus (Беларусь)',
     countryCode: '+375',
     placeholder: '(99) 999-99-99',
-    icon: '/images/flags/Belarus.svg'
+    icon: '/images/flags/belarus.svg'
   },
 
   {
