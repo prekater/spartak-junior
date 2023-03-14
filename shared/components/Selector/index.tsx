@@ -39,7 +39,8 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
     <div className={selectorWrapperStyle}>
       <div className={selectorInputStyle}>
         <button className={styles.selectButton} type="button" {...getToggleButtonProps()}>
-          <Image src={selectedItem ? selectedItem.icon : '/images/flags/russia.svg'} className={styles.flag} alt={selectedItem?.title || 'flag'} width={18} height={13}/>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={selectedItem ? selectedItem.icon : '/images/flags/russia.svg'} className={styles.flag} alt={selectedItem?.title || 'flag'} width='18px' height="13px"/>
           <span className={styles.arrowButton} />
           {selectedItem ? itemToString(selectedItem) : '+7'}
         </button>
@@ -63,7 +64,8 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
                 <span>{item.title}</span>
                 <div className={styles.codeWrapper}>
                   <span className={styles.margin}>{item.countryCode}</span>
-                  <Image className={cn(styles.margin, styles.flag)} src={item.icon} alt={item.title} width={18} height={13}/>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={item.icon} className={cn(styles.margin, styles.flag)} alt={item.title} width='18px' height="13px"/>
                 </div>
               </li>
             ))}
