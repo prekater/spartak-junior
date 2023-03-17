@@ -26,7 +26,7 @@ const Account = () => {
       <div className={styles.root} ref={accountRef} id="account">
         <div className={wrapper}>
           <h2 className={styles.title}>Ваш личный кабинет</h2>
-          <Advantages />
+          {/*<Advantages />*/}
           <FreeLessonButton onClick={handleShowModal} title="БЕСПЛАТНАЯ ТРЕНИРОВКА" className={styles.freeLesson} />
         </div>
       </div>
