@@ -1,14 +1,18 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
+import dynamic from "next/dynamic";
 
 import cn from 'clsx'
 import Image from 'next/image'
 
 import {useNavigation} from 'features/app/providers/NavigationProvider'
-import {Modal} from 'shared/components/Modal/'
 import {Selector} from 'shared/components/Selector/'
 import TitleBanner from 'shared/components/TitleBanner/'
 
 import styles from './UniformStore.module.scss'
+
+const Modal = dynamic(() => import('shared/components/Modal'), {
+    ssr: false,
+});
 
 const UniformStore = () => {
     const [showModal, setShowModal] = useState(false)

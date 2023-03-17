@@ -1,15 +1,19 @@
 import { useState } from 'react'
+import dynamic from "next/dynamic";
 
 import cn from 'clsx'
 
 import { useNavigation } from 'features/app/providers/NavigationProvider'
 import FreeLessonButton from 'shared/components/FreeLessonButton'
-import { Modal } from 'shared/components/Modal/'
 import { Selector } from 'shared/components/Selector/'
 
 import Advantages from './Advantages'
 
 import styles from './Account.module.scss'
+
+const Modal = dynamic(() => import('shared/components/Modal'), {
+  ssr: false,
+});
 
 const Account = () => {
   const [showModal, setShowModal] = useState(false)
@@ -26,7 +30,7 @@ const Account = () => {
       <div className={styles.root} ref={accountRef} id="account">
         <div className={wrapper}>
           <h2 className={styles.title}>Ваш личный кабинет</h2>
-          {/*<Advantages />*/}
+          <Advantages />
           <FreeLessonButton onClick={handleShowModal} title="БЕСПЛАТНАЯ ТРЕНИРОВКА" className={styles.freeLesson} />
         </div>
       </div>

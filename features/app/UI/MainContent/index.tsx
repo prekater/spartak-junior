@@ -16,7 +16,10 @@ import Methodology from '../Methodology'
 import Reviews from '../Reviews'
 import UniformStore from '../UniformStore'
 
-const Test = dynamic(() => import('../Test')) as FC
+const Test = dynamic(() => import('../Test'), {
+    ssr: false,
+}) as FC
+
 
 import styles from './MainContent.module.scss'
 

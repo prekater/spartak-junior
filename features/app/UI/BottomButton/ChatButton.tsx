@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 
 import styles from './BottomButton.module.scss'
 
-const Chat = dynamic(() => import('../Chat'))
+const Chat = dynamic(() => import('../Chat'), {ssr: false})
 
 export const ChatButton = () => {
   const [chatIsOpen, setChatIsOpen] = useState<boolean>(false)

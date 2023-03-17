@@ -13,7 +13,7 @@ interface IModal {
   children: ReactElement
 }
 
-export const Modal = ({ children, title, subTitle, onClose, isShowModal }: IModal) => {
+const Modal = ({ children, title, subTitle, onClose, isShowModal }: IModal) => {
   const [isShowPolitics, setIsShowPolitics] = useState(false)
   const { toggleScroll } = useScrollControl()
 
@@ -58,3 +58,4 @@ export const Modal = ({ children, title, subTitle, onClose, isShowModal }: IModa
     </>
   )
 }
+ export default Modal
