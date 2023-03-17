@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className={styles.root}>
       <div className={styles.curveBorder}>
-        <img src="/images/Trim.svg" className={styles.trimImg} />
+        <img src="/images/Trim.svg" className={styles.trimImg} alt=""/>
       </div>
       <img src="/images/Label.svg" alt="spartak" className={styles.logo} />
       <div className={styles.wrapperFooterContent}>

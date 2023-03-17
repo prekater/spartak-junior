@@ -32,8 +32,8 @@ const UniformStore = () => {
                         src="/images/formFCSM.jpg"
                         alt="Spartak Uniform"
                         fill
-                        object-fit="scale-down"
                         sizes="(max-width: 639.9px) 100vw, (max-width: 959.9px) 450px,(max-width: 1199.9px) 285px,(min-width: 1200px) 345px"
+                        className={styles.uniformImage}
                     />
                 </div>
                 <div className={styles.contentWrapper}>

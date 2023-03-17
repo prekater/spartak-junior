@@ -26,9 +26,9 @@ const AdviceAndTest = () => {
           </p>
           <button className={styles.buttonModal} onClick={() => onChangeOpenTest(true)}>
             Пройти тест
-            <div className={styles.roundArrow}>
+            <span className={styles.roundArrow}>
               <Image fill src="/images/round-arrow.svg" alt="round arrow" />
-            </div>
+            </span>
           </button>
         </div>
         <div className={styles.contentBanner}>
