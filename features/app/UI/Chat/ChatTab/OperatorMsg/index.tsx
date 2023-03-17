@@ -11,7 +11,7 @@ interface IProps {
   isFormFulfilled?: boolean
 }
 
-export const OperatorMsg = ({ message, isShowForm, onSubmitForm, isFormFulfilled }: IProps) => {
+const OperatorMsg = ({ message, isShowForm, onSubmitForm, isFormFulfilled }: IProps) => {
   const currentTimestamp = Date.now()
 
   const date = new Intl.DateTimeFormat('default', { hour: '2-digit', minute: '2-digit' }).format(currentTimestamp)
@@ -32,3 +32,5 @@ export const OperatorMsg = ({ message, isShowForm, onSubmitForm, isFormFulfilled
     </div>
   )
 }
+
+export default OperatorMsg

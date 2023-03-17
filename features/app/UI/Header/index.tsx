@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
+import dynamic from "next/dynamic";
 
 import cn from 'clsx'
 
 import FreeLessonButton from 'shared/components/FreeLessonButton'
-import { Modal } from 'shared/components/Modal/'
 import { Selector } from 'shared/components/Selector/'
 
 import Logo from './components/Logo'
@@ -11,6 +11,10 @@ import Menu from './components/Menu'
 import Phone from './components/Phone'
 
 import styles from './Header.module.scss'
+
+const Modal = dynamic(() => import('shared/components/Modal'), {
+  ssr: false,
+});
 
 const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false)

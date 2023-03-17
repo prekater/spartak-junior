@@ -40,7 +40,7 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
       <div className={selectorInputStyle}>
         <button className={styles.selectButton} type="button" {...getToggleButtonProps()}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={selectedItem ? selectedItem.icon : '/images/flags/russia.svg'} className={styles.flag} alt={selectedItem?.title || 'flag'} width='18px' height="13px"/>
+          <img src={selectedItem ? selectedItem.icon : '/images/flags/russia.svg'} className={styles.flag} alt={selectedItem?.title || 'flag'} width='18' height="13"/>
           <span className={styles.arrowButton} />
           {selectedItem ? itemToString(selectedItem) : '+7'}
         </button>
@@ -65,7 +65,7 @@ export const Selector = ({ onChangePhone, selectorWrapperClassName, selectorInpu
                 <div className={styles.codeWrapper}>
                   <span className={styles.margin}>{item.countryCode}</span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={item.icon} className={cn(styles.margin, styles.flag)} alt={item.title} width='18px' height="13px"/>
+                  <img src={item.icon} className={cn(styles.margin, styles.flag)} alt={item.title} width='18' height="13"/>
                 </div>
               </li>
             ))}

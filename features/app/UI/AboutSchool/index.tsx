@@ -1,15 +1,19 @@
 import { useState } from 'react'
+import dynamic from "next/dynamic";
 
 import cn from 'clsx'
 import Image from 'next/image'
 
 import FreeLessonButton from 'shared/components/FreeLessonButton'
-import { Modal } from 'shared/components/Modal/'
 import { Selector } from 'shared/components/Selector/'
 
 import { SchoolVideo } from './SchoolVideo/SchoolVideo'
 
 import styles from './AboutSchool.module.scss'
+
+const Modal = dynamic(() => import('shared/components/Modal/'), {
+  ssr: false,
+});
 
 const AboutSchool = () => {
   const [showModal, setShowModal] = useState(false)

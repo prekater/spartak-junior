@@ -16,7 +16,7 @@ const TitleBanner = ({ title, subtitle }: TBanner) => {
         <img src="/images/Label.svg" className={styles.mainLogo} alt="" />
       </div>
       <div className={styles.curveBorder}>
-        <img src="/images/Trim.svg" className={styles.trimImg} />
+        <img src="/images/Trim.svg" className={styles.trimImg} alt=""/>
       </div>
     </section>
   )

@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import dynamic from "next/dynamic";
 
 import cn from 'clsx'
 
-import { Modal } from '../../../../shared/components/Modal'
-import { Selector } from '../../../../shared/components/Selector'
+import { Selector } from 'shared/components/Selector'
 import { BottomBlock } from './BottomBlock'
 
 import styles from './BottomAnnouncement.module.scss'
+
+const Modal = dynamic(() => import('shared/components/Modal'), {
+    ssr: false,
+});
 
 export const BottomAnnouncement = () => {
   const [showModal, setShowModal] = useState(false)
