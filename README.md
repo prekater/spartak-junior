@@ -1,1 +1,1 @@
-# spartak-junior
+Была задача сделать сайт, аналогичный [вот этому](https://xn--80aa4argdk.xn--90auioef.xn--d1acj3b/?ch=1197381)
